@@ -260,6 +260,7 @@ class _TransactionFormState extends State<TransactionForm> {
               const SizedBox(height: 12),
               TextFormField(
                 controller: amount,
+                inputFormatters: moneyInputFormatters,
                 keyboardType: const TextInputType.numberWithOptions(
                   decimal: true,
                 ),

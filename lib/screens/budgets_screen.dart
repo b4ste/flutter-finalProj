@@ -240,6 +240,7 @@ class _BudgetFormState extends State<BudgetForm> {
               ),
               TextFormField(
                 controller: limit,
+                inputFormatters: moneyInputFormatters,
                 keyboardType: const TextInputType.numberWithOptions(
                   decimal: true,
                 ),
@@ -357,6 +358,7 @@ class _GoalFormState extends State<GoalForm> {
               ),
               TextFormField(
                 controller: target,
+                inputFormatters: moneyInputFormatters,
                 keyboardType: const TextInputType.numberWithOptions(
                   decimal: true,
                 ),
@@ -370,6 +372,7 @@ class _GoalFormState extends State<GoalForm> {
               const SizedBox(height: 12),
               TextFormField(
                 controller: saved,
+                inputFormatters: moneyInputFormatters,
                 keyboardType: const TextInputType.numberWithOptions(
                   decimal: true,
                 ),

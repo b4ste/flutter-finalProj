@@ -1,4 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
+List<TextInputFormatter> get moneyInputFormatters => [
+  FilteringTextInputFormatter.allow(RegExp(r'[0-9.]')),
+  TextInputFormatter.withFunction(
+    (oldValue, newValue) =>
+        RegExp(r'^\d*(\.\d*)?$').hasMatch(newValue.text) ? newValue : oldValue,
+  ),
+];
 
 String money(double value) {
   final negative = value < 0 ? '-' : '';
